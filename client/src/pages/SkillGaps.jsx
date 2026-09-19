@@ -1,4 +1,4 @@
-import GapList from "../components/profile/GapList";
+import GapList from "../components/gaps/GapList";
 import RoleSelector from "../components/profile/RoleSelector";
 
 function SummaryIcon({ type }) {
