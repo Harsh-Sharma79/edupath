@@ -1,3 +1,4 @@
+import React from "react";
 import { useLearner as useLearnerContext } from "../context/LearnerContext";
 
 function normalizeSkillName(value) {
