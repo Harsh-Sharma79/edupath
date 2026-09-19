@@ -1,6 +1,6 @@
-import PlanHeader from "../components/plan/PlanHeader";
-import TaskTimeline from "../components/plan/TaskTimeline";
-import AdaptationCard from "../components/plan/AdaptationCard";
+import PlanHeader from "../components/plans/PlanHeader";
+import TaskTimeline from "../components/plans/TaskTimeline";
+import AdaptationCard from "../components/plans/AdaptationCard";
 
 const fallbackPlan = {
   title: "Your Frontend Learning Plan",
