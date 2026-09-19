@@ -1,3 +1,4 @@
+import React from "react";
 function clampPercentage(value) {
   const numericValue = Number(value);
   if (!Number.isFinite(numericValue)) return 0;

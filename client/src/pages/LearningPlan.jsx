@@ -1,3 +1,4 @@
+import React from "react";
 import PlanHeader from "../components/plans/PlanHeader";
 import TaskTimeline from "../components/plans/TaskTimeline";
 import AdaptationCard from "../components/plans/AdaptationCard";

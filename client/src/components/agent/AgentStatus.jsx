@@ -1,3 +1,4 @@
+import React from "react";
 const statusConfig = {
   online: { label: "Online", tone: "green", icon: "check", active: false },
   working: { label: "Working", tone: "blue", icon: "activity", active: true },

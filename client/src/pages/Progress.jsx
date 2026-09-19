@@ -1,3 +1,4 @@
+import React from "react";
 import ProgressSummary from "../components/progress/ProgressSummary";
 import SkillProgress from "../components/progress/SkillProgress";
 import NextAction from "../components/progress/NextAction";

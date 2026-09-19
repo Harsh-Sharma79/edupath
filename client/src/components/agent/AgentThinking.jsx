@@ -1,3 +1,4 @@
+import React from "react";
 const statusConfig = {
   thinking: {
     label: "Thinking",

@@ -1,3 +1,4 @@
+import React from "react";
 const priorityConfig = {
   low: {
     label: "Low",

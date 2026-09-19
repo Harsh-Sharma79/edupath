@@ -1,3 +1,4 @@
+import React from "react";
 import TaskStatus from "./TaskStatus";
 
 const statusStyles = {

@@ -1,3 +1,4 @@
+import React from "react";
 import ChatPanel from "../components/chat/ChatPanel";
 import AgentStatus from "../components/agent/AgentStatus";
 
