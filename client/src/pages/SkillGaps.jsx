@@ -1,5 +1,5 @@
-import GapList from "../components/common/GapList";
-import RoleSelector from "../components/common/RoleSelector";
+import GapList from "../components/profile/GapList";
+import RoleSelector from "../components/profile/RoleSelector";
 
 function SummaryIcon({ type }) {
   const props = {
