@@ -17,9 +17,9 @@ import "./layout.css";
 
 const mainNavigation = [
   { label: "Overview", path: "/dashboard", icon: LayoutDashboard },
-  { label: "My Skills", path: "/skills", icon: Brain },
-  { label: "Skill Gaps", path: "/gaps", icon: Target },
-  { label: "My Plan", path: "/plan", icon: Map },
+  { label: "My Skills", path: "/skill-gaps", icon: Brain },
+  { label: "Skill Gaps", path: "/learning-plan", icon: Target },
+  { label: "My Plan", path: "/adaptation", icon: Map },
   { label: "Progress", path: "/progress", icon: BarChart3 },
 ];
 
