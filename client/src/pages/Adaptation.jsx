@@ -1,4 +1,4 @@
-import AdaptationCard from "../components/plan/AdaptationCard";
+import AdaptationCard from "../components/plans/AdaptationCard";
 import AgentActivity from "../components/agent/AgentActivity";
 import AgentStatus from "../components/agent/AgentStatus";
 
