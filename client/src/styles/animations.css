@@ -1,0 +1,202 @@
+@import "./variables.css";
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-2));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(calc(var(--space-2) * -1));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(var(--space-4));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(calc(var(--space-4) * -1));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulseSoft {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.72;
+    transform: scale(0.98);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounceDot {
+  0%,
+  60%,
+  100% {
+    opacity: 0.45;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(calc(var(--space-1) * -1));
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 300ms ease-out both;
+}
+
+.animate-fade-up {
+  animation: fadeUp 300ms ease-out both;
+}
+
+.animate-fade-down {
+  animation: fadeDown 300ms ease-out both;
+}
+
+.animate-scale-in {
+  animation: scaleIn 250ms ease-out both;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 300ms ease-out both;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 300ms ease-out both;
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 1800ms ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 1600ms linear infinite;
+}
+
+.animate-spin {
+  animation: spin 900ms linear infinite;
+}
+
+.animate-bounce-dot {
+  animation: bounceDot 1200ms ease-in-out infinite;
+}
+
+.ai-pulse {
+  animation: pulseSoft 1800ms ease-in-out infinite;
+}
+
+.ai-thinking {
+  animation: pulseSoft 1400ms ease-in-out infinite;
+}
+
+.ai-glow {
+  animation: pulseSoft 2200ms ease-in-out infinite;
+}
+
+.stagger-1 {
+  animation-delay: 50ms;
+}
+
+.stagger-2 {
+  animation-delay: 100ms;
+}
+
+.stagger-3 {
+  animation-delay: 150ms;
+}
+
+.stagger-4 {
+  animation-delay: 200ms;
+}
+
+.stagger-5 {
+  animation-delay: 250ms;
+}
+
+.skeleton {
+  background-color: var(--color-surface-muted);
+  background-image: linear-gradient(
+    90deg,
+    var(--color-surface-muted) 0%,
+    var(--color-surface) 45%,
+    var(--color-surface-muted) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1600ms linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
