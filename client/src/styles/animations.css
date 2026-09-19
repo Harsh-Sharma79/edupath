@@ -12,55 +12,55 @@
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(var(--space-2));
+    transform: translate3d(0, var(--space-3), 0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes fadeDown {
   from {
     opacity: 0;
-    transform: translateY(calc(var(--space-2) * -1));
+    transform: translate3d(0, calc(var(--space-3) * -1), 0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.98);
+    transform: scale(0.965) translateZ(0);
   }
   to {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1) translateZ(0);
   }
 }
 
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(var(--space-4));
+    transform: translate3d(var(--space-5), 0, 0);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(calc(var(--space-4) * -1));
+    transform: translate3d(calc(var(--space-5) * -1), 0, 0);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -72,16 +72,16 @@
   }
   50% {
     opacity: 0.72;
-    transform: scale(0.98);
+    transform: scale(0.975);
   }
 }
 
 @keyframes shimmer {
   from {
-    background-position: 200% 0;
+    background-position: 180% 0;
   }
   to {
-    background-position: -200% 0;
+    background-position: -180% 0;
   }
 }
 
@@ -98,37 +98,87 @@
   0%,
   60%,
   100% {
-    opacity: 0.45;
-    transform: translateY(0);
+    opacity: 0.38;
+    transform: translate3d(0, 0, 0) scale(0.9);
   }
   30% {
     opacity: 1;
-    transform: translateY(calc(var(--space-1) * -1));
+    transform: translate3d(0, calc(var(--space-1) * -1), 0) scale(1);
   }
 }
 
+@keyframes aiGlow {
+  0%,
+  100% {
+    opacity: 0.82;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.025);
+  }
+}
+
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, calc(var(--space-1) * -1), 0);
+  }
+}
+
+@keyframes progressGlow {
+  0%,
+  100% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in,
+.animate-fade-up,
+.animate-fade-down,
+.animate-scale-in,
+.animate-slide-in-right,
+.animate-slide-in-left,
+.animate-pulse-soft,
+.animate-shimmer,
+.animate-spin,
+.animate-bounce-dot,
+.ai-pulse,
+.ai-thinking,
+.ai-glow,
+.skeleton {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
 .animate-fade-in {
-  animation: fadeIn 300ms ease-out both;
+  animation: fadeIn var(--transition-slow) ease-out both;
 }
 
 .animate-fade-up {
-  animation: fadeUp 300ms ease-out both;
+  animation: fadeUp var(--transition-spring) both;
 }
 
 .animate-fade-down {
-  animation: fadeDown 300ms ease-out both;
+  animation: fadeDown var(--transition-spring) both;
 }
 
 .animate-scale-in {
-  animation: scaleIn 250ms ease-out both;
+  animation: scaleIn var(--transition-spring) both;
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 300ms ease-out both;
+  animation: slideInRight var(--transition-spring) both;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 300ms ease-out both;
+  animation: slideInLeft var(--transition-spring) both;
 }
 
 .animate-pulse-soft {
@@ -136,11 +186,12 @@
 }
 
 .animate-shimmer {
-  animation: shimmer 1600ms linear infinite;
+  animation: shimmer 1700ms linear infinite;
 }
 
 .animate-spin {
-  animation: spin 900ms linear infinite;
+  animation: spin 850ms linear infinite;
+  transform-origin: center;
 }
 
 .animate-bounce-dot {
@@ -148,15 +199,24 @@
 }
 
 .ai-pulse {
-  animation: pulseSoft 1800ms ease-in-out infinite;
+  animation: pulseSoft 1900ms ease-in-out infinite;
 }
 
 .ai-thinking {
-  animation: pulseSoft 1400ms ease-in-out infinite;
+  animation: aiGlow 1600ms ease-in-out infinite;
 }
 
 .ai-glow {
-  animation: pulseSoft 2200ms ease-in-out infinite;
+  animation: aiGlow 2400ms ease-in-out infinite;
+  filter: drop-shadow(0 0 0.75rem rgb(124 58 237 / 0.18));
+}
+
+.animate-float-soft {
+  animation: floatSoft 2400ms ease-in-out infinite;
+}
+
+.animate-progress-glow {
+  animation: progressGlow 1800ms ease-in-out infinite;
 }
 
 .stagger-1 {
@@ -180,15 +240,18 @@
 }
 
 .skeleton {
+  overflow: hidden;
   background-color: var(--color-surface-muted);
   background-image: linear-gradient(
-    90deg,
-    var(--color-surface-muted) 0%,
-    var(--color-surface) 45%,
-    var(--color-surface-muted) 100%
+    105deg,
+    var(--color-surface-muted) 15%,
+    var(--color-surface) 35%,
+    var(--color-surface-muted) 55%
   );
-  background-size: 200% 100%;
-  animation: shimmer 1600ms linear infinite;
+  background-position: 180% 0;
+  background-repeat: no-repeat;
+  background-size: 220% 100%;
+  animation: shimmer 1700ms linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -198,5 +261,6 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
