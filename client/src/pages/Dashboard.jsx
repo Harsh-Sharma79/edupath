@@ -1,7 +1,7 @@
 import ProfileCard from "../components/common/ProfileCard";
 import AgentActivity from "../components/agent/AgentActivity";
 import AgentStatus from "../components/agent/AgentStatus";
-import NextAction from "client/src/components/progress/NextAction";
+import NextAction from "../components/progress/NextAction";
 import ProgressSummary from "../components/progress/ProgressSummary";
 import SkillProgress from "../components/progress/SkillProgress";
 
