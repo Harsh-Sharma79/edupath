@@ -1,4 +1,4 @@
-import ProfileCard from "../components/common/ProfileCard";
+import ProfileCard from "../components/profile/ProfileCard";
 import AgentActivity from "../components/agent/AgentActivity";
 import AgentStatus from "../components/agent/AgentStatus";
 import NextAction from "../components/progress/NextAction";
